@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<!--
+Suryavanshi, Megha
+RedID 823443511
+CS545_00 Cynthia Chie
+Assignment #3
+Fall 2018
+-->
+
+<html lang='en'>
+
+<head>
+	<title>SDSU Natural History Museum</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<header>
+   <img src="images/logo.jpg" alt="SDSU NHM Logo">
+   <h1>San Diego State University <br> Natural History Museum</h1>
+</header>
+    <nav>
+      <ul>
+         <li><a href="index.html">Home</a></li>
+         <li><a href="about.html">About Us</a></li>
+         <li><a href="exhibits.html">Exhibits</a></li>
+         <li><a href="events.html">Events</a></li>
+         <li><a href="science.html">Science & Research</a></li>
+         <li><a href="join.html">Join & Support</a></li>
+         <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+     </nav>
+
+<section class="flex-container">
+<div class="column2_1">
+
+<h2>Signup to Register for upcoming SDSU Events</h2>
+<p>Please fill this form to Register for Upcoming Events and click submit when finished </br> Items marked with an asterisk (*) are <strong> *Required Fields </strong></p>
+
+<form action="request.php" method="post">
+<fieldset>
+
+  <legend>Personal information:</legend>
+     <label for="firstname">First name<span class="required">*</span>:</label><br />
+     <input type="text" name="firstname" id="firstname" size="40"  maxlength="60" value="<?php echo $firstname; ?>" ><span class = "error"><?php echo " " . $firstnameErr;?></span>
+	<br />
+
+    <label for="lastname">Last name<span class="required">*</span>:</label><br />
+    <input type="text" name="lastname" id="lastname" size="40"  maxlength="60" value="<?php echo $lastname; ?>" ><span class = "error"><?php echo " " . $lastnameErr;?></span>
+	<br />
+
+    <label for="address">Address:</label><br />
+    <input type="text" name="address" id="address" size="120"  maxlength="100" value="<?php echo $address; ?>" >
+	<br />
+
+    <label for="phone">Phone:</label><br />
+    <input type="text" name="phone" id="phone" size="40"  maxlength="15" value="<?php echo $address; ?>" >
+	<br />
+
+    <label for="email">Email<span class="required">*</span>:</label><br />
+    <input type="email" name="email" id="email" size="80"  maxlength="255" value="<?php echo $email; ?>" ><span class = "error"><?php echo " " . $emailErr;?></span>
+	<br />
+</fieldset>
+
+<fieldset>
+  <legend>Interests:</legend>
+
+<label for="event">Select Event to Register<span class="required">*</span>:</label><br />
+	<select name="Select Event to register" id="event">
+	  <option value="family">Family</option>
+	  <option value"adults">Adults</option>
+	  <option value="hikes">Nature Hikes</option>
+          <option value="all">All</option>
+       </select><br>
+
+<label for="event"> Total Number of attendees<span class="required">*</span>:</label><br>
+<ul>
+  <li> Number of attendees under 5 years old<span class="required">*</span>:</li>
+<input type="text" name="number" id="number" size="1"  maxlength="2" value="<?php echo $number; ?>" ><span class = "error"><?php echo " " . $Enter numberErr;?></span>
+	<br />
+<input type="number" name="quantity" min="1" max="6"> <br>
+<li> Number of attendees between 5 and 12 years old<span class="required">*</span>:</li>
+        <select>
+	  <option value="0">0</option>
+	  <option value"1">1</option>
+	  <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+       </select><br>
+
+<li>Number of attendees 13 to 17 years old<span class="required">*</span>:</li>
+        <select>
+	  <option value="0">0</option>
+	  <option value"1">1</option>
+	  <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+       </select><br>
+
+<li> Number of attendees 18+ years old<span class="required">*</span>:</li>
+        <select>
+	  <option value="0">0</option>
+	  <option value"1">1</option>
+	  <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+       </select>
+"(required adult:kid Ratios – 0-5Yr Old 1:2; 5-12Yr Old 1:4; 13-17Yr Old 1:6 – More than 7 Attendees, Please call for details)"
+</ul><br>
+
+  <label for="newsletter">Signup for newsletter:</label><br />
+
+  <input type="checkbox" name="interested" value="yes" checked>Interested<br>
+  <input type="checkbox" name="not interested" value="No">Not Interested<br>
+
+  <label for="other_events">Lets us know what other types of Event interests you?</label><br />
+  <textarea name="other_events" id="other_events" rows="8" cols="40"><?php echo $other_events; ?></textarea>
+
+</fieldset>
+
+  <input type="submit" value="Submit">
+  <input type="reset" value="Clear All">
+
+</form>
+</div>
+	
+<div class="column2_2">
+
+<h2>Support the Museum</h2>
+
+<p>At the San Diego State University Museum of Natural History we strive to fulfill our mission to interpret the natural world through research, education and exhibits; to promote understanding of the evolution and diversity of southern California and the peninsula of Baja California; to train and grow our future leaders in research and conservation; and to inspire in all a respect for nature and the environment. We depend on people like you to help us realize this mission. </p>
+
+<h2> Get Involved in the following ways.</h2>
+
+<ul class="list">
+    <li><a class="button" href="join.html">Become a Member</a></li>
+    <li><a class="button" href="donate.html">Donate</a></li>
+    <li><a class="button" href="volunteer.html">Volunteer</a></li>
+    <li><a class="button" href="contact.html">Hours & Admission</a></li>
+</ul>
+</div>
+</section>
+
+<footer>
+<address>
+Contact Us:<br>
+San Diego State University<br>
+Natural History Museum<br>
+San Diego, CA 92182-0000<br>619.594.5200<br>
+<a href="#">nhmuseum@sdsu.edu</a>
+</address>
+</footer>
